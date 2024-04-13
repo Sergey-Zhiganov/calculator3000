@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Калькулятор</title>
 </head>
@@ -26,24 +27,6 @@
     <input type="button" value="=" onclick="calculate()">
     <input type="button" value="/" onclick="addToDisplay('/')">
 </div>
-<script>
-    function addToDisplay(value) {
-        document.getElementById('display').value += value;
-    }
-
-    function clearDisplay() {
-        document.getElementById('display').value = '';
-    }
-
-    function calculate() {
-        try {
-            var result = eval(document.getElementById('display').value);
-            document.getElementById('display').value = result;
-        } catch (error) {
-            document.getElementById('display').value = 'Error';
-        }
-    }
-</script>
 
 </body>
 </html>
